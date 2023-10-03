@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import About from '../../components/About';
 import Works from '../../components/Works';
 import Maps from '../../components/Maps';
+import Footer from '../../components/Footer'
 
 
 export default function Home() {
@@ -11,6 +12,8 @@ export default function Home() {
             <Header />            
             <About />
             <Works />
+            <Maps />
+            <Footer />
         </>
     )
 }

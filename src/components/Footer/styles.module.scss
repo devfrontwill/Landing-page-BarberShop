@@ -1,0 +1,40 @@
+@import '../../partials/colors';
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 54px 0;
+    gap: 24px;
+    color: $white-normal;
+}
+
+.footer_icons{
+    display: flex;
+    gap: 8px;
+    color: $white-normal;    
+}
+
+.btn_whatsapp{
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+
+    img{
+        max-width: 74px;
+        transition: transform 0.4s;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .footer{        
+            padding-left: 12px;
+            padding-right: 12px;     
+    }
+}
