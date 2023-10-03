@@ -1,3 +1,166 @@
-.container{
-    background: #9c9c9c;
+@import '../../partials/colors';
+
+header {
+    content: '';
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e);
+    background: url("../../assets/bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    
+    width: 100%;
+    height: 100vh;
+    display: block;
+    left: 0;
+    top: 0;
+    opacity: 0.9;
+
+    .container_social {
+        display: flex;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 12px;
+        align-items: center;
+        justify-content: space-between;
+
+        .header_icons {
+            display: flex;
+
+            gap: 14px;
+
+            .social_item {
+                color: $white-normal;
+
+                &:hover {
+                    color: $red-light;
+                    animation: animacao 0.8s infinite alternate;
+
+                }
+            }
+
+        }
+
+
+    }
+}
+
+@keyframes animacao {
+    from {
+        transform: translateY(0) scale(1);
+    }
+
+    to {
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+.header_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.header_button {
+    border: 1px solid $white-normal;
+    padding: 8px 24px;
+    border-radius: 4px;
+    color: $white-normal;
+    background-color: transparent;
+    transition: background-color 0.8s;
+
+    &:hover {
+        border: 1px solid $red-light;
+        background-color: $red-light;
+    }
+}
+
+.hero_container {
+    color: $white-normal;
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+    h1 {
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 46px;
+    }
+
+    p {
+        text-align: center;
+        margin: 14px 0;
+    }
+}
+
+.button_contact {
+    padding: 14px 28px;
+    color: $white-normal;
+    background-color: $red-normal;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0;
+
+    &:hover {
+        animation: scaleButton 0.8s alternate infinite;
+        
+    }
+}
+
+@keyframes scaleButton{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.07);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container_social {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .social_item {
+            margin-top: 16px;
+        }
+    }
+
+    .header_logo img {
+        width: 160px;
+        margin-top: 46px;
+    }
+
+    .header_button {
+        display: none;
+    }
+
+    .hero_container{
+        min-height: 60vh;
+        h1{
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+        p{
+            font-size: 14px;            
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .hero_container{
+        h1{
+            font-size: 24px;
+        }
+    }
 }
