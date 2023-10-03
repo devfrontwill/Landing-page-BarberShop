@@ -1,0 +1,42 @@
+@import '../../partials/colors';
+
+.services {   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 54px 14px;
+
+    background-color: $white-normal;
+    color: $black-normal;
+
+    .services__content {        
+
+        h2 {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 14px;
+        }
+
+        p {
+            line-height: 150%;
+            margin-bottom: 14px;
+            text-align: center;
+            max-width: 780px;
+        }
+    }
+
+    .haircuts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        padding: 0 44px 34px 44px;
+        
+        .haircut{
+            flex: 1;
+        }
+    }
+
+}
