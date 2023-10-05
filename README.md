@@ -16,7 +16,7 @@ Barber Shop. A sua barbearia.
   O site possui uma seção que mostra a localização do estabelecimento e para tal foi utilizado a APi do Google maps.
 
 
-## Tecnologias utilizadas :
+### Tecnologias utilizadas :
 
 
 - **[React](https://reactnative.dev/](https://react.dev))**
