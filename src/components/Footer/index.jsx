@@ -2,8 +2,14 @@ import styles from './styles.module.scss';
 import { BsInstagram, BsTiktok, BsFacebook } from 'react-icons/bs';
 import logo from '../../assets/logo.svg';
 import whatsapp from '../../assets/whatssapp.svg';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 
 export default function Footer() {
+
+    Aos.init();
+
     return (
         <>
             <footer className={styles.footer} >
@@ -42,14 +48,26 @@ export default function Footer() {
             </footer>
 
             <a className={styles.btn_whatsapp}
-            href='#'
+            data-aos="zoom-in-up" data-aos-delay="400"
+            href="https://api.whatsapp.com/send?phone=5521990556961&text=Ol%C3%A1,%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20!"
             >
                 <img 
                 src={whatsapp}
                 alt="Botao whatsapp"
                 />
-                <span className={styles.span_text} > Agende seu horário</span>
+                <span className={styles.tooltip_text} > Agende seu horário</span>
             </a>    
         </>
     )
 }
+
+<a className={styles.btn_whatsapp}
+            data-aos="zoom-in-up" data-aos-delay="400"
+            href="https://api.whatsapp.com/send?phone=5521990556961&text=Ol%C3%A1,%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20!"
+            >
+                <img 
+                src={whatsapp}
+                alt="Botao whatsapp"
+                />
+                <span className={styles.tooltip_text} > Agende seu horário</span>
+            </a>

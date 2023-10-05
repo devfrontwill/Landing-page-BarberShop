@@ -32,9 +32,33 @@
     }
 }
 
+.btn_whatsapp .tooltip_text{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    padding: 6px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $black-normal;
+    color: $white-normal;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.btn_whatsapp:hover .tooltip_text{
+    visibility: visible;
+    opacity: 1;
+}
+
 @media screen and (max-width: 768px){
     .footer{        
             padding-left: 12px;
             padding-right: 12px;     
+    }
+
+    .btn_whatsapp{
+        max-width:64px;
     }
 }

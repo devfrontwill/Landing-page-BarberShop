@@ -1,4 +1,15 @@
-.container__maps{
-    width: 100%;
-    height: 50vh;
+@import '../../partials/colors';
+
+.title {
+    background-color: $white-normal;
+    color: $black-normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 54px 14px;
+
+}
+.map_text{
+    margin-bottom: 60px;
+    background-color: #f0f76a;
 }
